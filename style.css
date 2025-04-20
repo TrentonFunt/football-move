@@ -18,8 +18,8 @@
 }
 
 .field {
-  width: 400px;
-  height: 300px;
+  width: 600px;
+  height: 450px;
   border: 5px solid #2c3e50 ;
   background: linear-gradient(to bottom, #4CAF50, #45a049);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) ;

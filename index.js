@@ -1,4 +1,4 @@
-class SoccerGame {
+class FootballGame {
   constructor() {
     // Game state
     this.score = 0;
@@ -99,5 +99,5 @@ class SoccerGame {
 
 // Initialize game when document loads
 document.addEventListener('DOMContentLoaded', () => {
-  new SoccerGame();
+  new FootballGame();
 });
