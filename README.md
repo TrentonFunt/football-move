@@ -43,19 +43,19 @@ A browser-based interactive game where players move a soccer ball across a field
 
 ## How To Play
 
-- 1. Click anywhere on the green field
+- Click anywhere on the green field
 
-- 2. Ball moves smoothly to clicked position
+- Ball moves smoothly to clicked position
 
-- 3. Score goals by moving ball into right-side goalpost
+- Score goals by moving ball into right-side goalpost
 
-- 4. Track your score in the top scoreboard
+- Track your score in the top scoreboard
 
-- 5. Ball automatically stays within field boundaries
+- Ball automatically stays within field boundaries
 
 ## Customization
 
-- Modify game parameters in style.css and index.js:
+- Modify game parameters in style.css:
    ```css
    /* Change field dimensions */
   .field {
@@ -70,14 +70,25 @@ A browser-based interactive game where players move a soccer ball across a field
   box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Shadow effect */
   }
 
-   ```javascript
-      // Adjust goal detection margins
-    calculateGoalBounds() {
-    const goalRect = this.goalpost.getBoundingClientRect();
-    this.goalBounds = {
-      left: goalRect.left + 10,   // Left detection margin
-      right: goalRect.right - 10, // Right detection margin
-      top: goalRect.top + 20,     // Top detection margin
-      bottom: goalRect.bottom - 20 // Bottom detection margin
-    };
-  }
+## Technical Implementation
+
+### Boundary System
+- Uses getBoundingClientRect() for accurate position tracking
+
+- Implements coordinate clamping with Math.max()/Math.min()
+
+- Accounts for ball radius in position calculations
+
+### Goal Detection
+- Virtual goal bounds calculation
+
+- Ball center position checking
+
+- State management to prevent score spam
+
+### Animation System
+- CSS transitions for smooth movement
+
+- Keyframe animations for goal effects
+
+- Cubic-bezier timing functions for natural motion
