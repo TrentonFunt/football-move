@@ -1,4 +1,4 @@
-# Soccer Practice Game ⚽
+# Football Practice Game ⚽
 
 A browser-based interactive game where players move a soccer ball across a field to score goals, featuring boundary constraints and score tracking.
 
